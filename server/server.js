@@ -7,7 +7,7 @@ module.exports = io;
 require('./socket/socket');
 
 
-server.listen(3100, () => {
+server.listen(process.env.PORT, () => {
     console.log("Socket server up");
 
     const agenda = require('./agenda/agenda');
