@@ -6,6 +6,8 @@ const notificaciones = new Map();
 
 let connection = async() => {
     await mongoose.connect(process.env.DB_URI, {
+        user: process.env.MONGO_USER,
+        pass: encodeURIComponent(process.env.MONGO_PASS),
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
