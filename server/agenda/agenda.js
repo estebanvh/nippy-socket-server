@@ -26,6 +26,8 @@ const agenda = new Agenda({
     db: {
         address: process.env.DB_URI,
         options: {
+            user: process.env.MONGO_USER,
+            pass: encodeURIComponent(process.env.MONGO_PASS),
             useUnifiedTopology: true
         }
     }
