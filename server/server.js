@@ -12,8 +12,8 @@ server.listen(3100, () => {
 
     const agenda = require('./agenda/agenda');
     agenda.on('ready', function() {
-        agenda.every('1 minute', 'caducaDias');
-        agenda.processEvery('1 minute');
+        agenda.every(process.env.PERIODICIDAD, 'caducaDias');
+        agenda.processEvery(process.env.PERIODICIDAD);
         agenda.start();
     });
 });
