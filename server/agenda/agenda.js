@@ -24,7 +24,7 @@ const { actualizar } = require('../DAO/reto-user.dao');
 
 const agenda = new Agenda({
     db: {
-        address: `${process.env.MONGO_USER}/${encodeURIComponent(process.env.MONGO_PASS)}/${process.env.DB_URI}`,
+        address: process.env.MONGO_AGENDA,
         options: {
             useUnifiedTopology: true
         }
